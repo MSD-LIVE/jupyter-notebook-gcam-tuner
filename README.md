@@ -1,4 +1,4 @@
-# MSD-LIVE BLANK Notebook
+# MSD-LIVE jupyter-notebook-gcam-tuner Notebook
 
 This repo contains the Dockerfile to build the notebook image as well as the notebooks
 used in the MSD-LIVE deployment. It will rebuild the image whenever changes are pushed to the main and dev branches.
@@ -12,7 +12,7 @@ to pull from s3 (instructions below) if you want to test locally**
    1. Select the [template-project-jupyter-notebook](https://github.com/MSD-LIVE/template-project-jupyter-notebook) as the repository template
    1. The repo name must start with ``jupyter-notebook-``. The domain of this notebook when running on MSD-LIVE's jupyter services will be whatever comes after (i.e. the [cerf](https://github.com/MSD-LIVE/jupyter-notebook-cerf) repo is named jupyter-notebook-cerf and the URL to it's notebooks hosted by MSD-LIVE is `https://cerf.msdlive.org` )
    1. The repo must be public. 
-1. Find/replace `<<blank>>` in docker-compose and `BLANK` in this readme with your repo name
+1. Find/replace `jupyter-notebook-gcam-tuner` in docker-compose and `jupyter-notebook-gcam-tuner` in this readme with your repo name
 1. Set PROJECT environment var in git:
    1. After the repo has been created from the github UI go to Settings, from left click on Secrets and variables and select Actions
    1. Click on the Variables tab, click the green New repository variable button
@@ -70,16 +70,16 @@ Here are some ways to add specific behaviors for notebook containers. Note these
 1. Get the data (requires .aws/credentials to be set or use of aws access tokens [see next section on how to get and use])
 
    ```bash
-   # make sure you are in the jupyter-notebook-<<blank>> folder
+   # make sure you are in the jupyter-notebook-jupyter-notebook-gcam-tuner folder
    mkdir data
    cd data
-   aws s3 cp s3://<<blank>>-notebook-bucket/data . --recursive
+   aws s3 cp s3://jupyter-notebook-gcam-tuner-notebook-bucket/data . --recursive
 
    ```
 
 2. Start the notebook via docker compose
    ```bash
-   # make sure you are in the jupyter-notebook-<<blank>> folder
+   # make sure you are in the jupyter-notebook-jupyter-notebook-gcam-tuner folder
    cd ..
    docker compose up
    ```
