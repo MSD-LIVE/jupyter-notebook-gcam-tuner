@@ -2,11 +2,11 @@
 # for testing.
 services:
   notebook:
-    container_name: <<blank>>-notebook
+    container_name: jupyter-notebook-gcam-tuner-notebook
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/msd-live/jupyter/<<blank>>-notebook:latest
+    image: ghcr.io/msd-live/jupyter/jupyter-notebook-gcam-tuner-notebook:latest
     ports:
       - "8888:8888"
     volumes:
