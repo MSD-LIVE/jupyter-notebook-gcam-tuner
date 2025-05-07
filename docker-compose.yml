@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: gcam_tuner_deploy
     image: ghcr.io/msd-live/jupyter/jupyter-notebook-gcam-tuner-notebook:latest
     ports:
       - "8888:8888"
