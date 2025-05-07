@@ -32,7 +32,7 @@ ENV GCAM_INCLUDE=/home/jovyan/gcam-core/cvs/objects \
     GCAM_LIB=/home/jovyan/gcam-core/cvs/objects/build/linux
 
 
-FROM gcam_dev AS gcamr_r_dev
+FROM gcam_dev AS gcam_r_dev
 RUN cd /home/jovyan/gcamwrapper && \
     Rscript -e "devtools::install_deps()"
 RUN Rscript -e "devtools::install_cran('ggplot2')"
@@ -49,10 +49,10 @@ RUN cd /home/jovyan/gcamwrapper && \
 FROM ghcr.io/msd-live/jupyter/r-notebook:latest AS gcam_tuner_deploy
 RUN conda install -y tbb=2020.2 libboost-python=1.85.0 pandas
 RUN pip install matplotlib
-COPY --from=gcamwrapper_r_dev /opt/conda/lib/R/library /opt/conda/lib/R/library
-COPY --from=gcamwrapper_py_dev /opt/conda/lib/python3.11/site-packages/gcam*.so /opt/conda/lib/python3.11/site-packages/
-COPY --from=gcamwrapper_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper /opt/conda/lib/python3.11/site-packages/gcamwrapper
-COPY --from=gcamwrapper_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info
+COPY --from=gcam_r_dev /opt/conda/lib/R/library /opt/conda/lib/R/library
+COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcam*.so /opt/conda/lib/python3.11/site-packages/
+COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper /opt/conda/lib/python3.11/site-packages/gcamwrapper
+COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info
 RUN mkdir -p /data && ln -s /data $HOME/data
 RUN pip install jaxlib jax
 COPY notebooks /home/jovyan/notebooks
