@@ -53,6 +53,5 @@ COPY --from=gcam_r_dev /opt/conda/lib/R/library /opt/conda/lib/R/library
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcam*.so /opt/conda/lib/python3.11/site-packages/
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper /opt/conda/lib/python3.11/site-packages/gcamwrapper
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info
-RUN mkdir -p /data && ln -s /data $HOME/data
 RUN pip install jaxlib jax
 COPY notebooks /home/jovyan/notebooks
