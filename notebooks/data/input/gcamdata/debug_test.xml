@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+        <region name="USA">
+            <unlimited-resource name="renewable">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+            <unlimited-resource name="elect_td_trn">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+            <unlimited-resource name="delivered coal">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+            <unlimited-resource name="H2 wholesale dispensing">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+            <unlimited-resource name="refined liquids enduse">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+            <unlimited-resource name="H2 retail dispensing">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+            <unlimited-resource name="delivered gas">
+                <output-unit>EJ</output-unit>
+                <price-unit>1975$/GJ</price-unit>
+                <market>USA</market>
+                <price year="1975">1</price>
+                <price year="1990">1</price>
+                <price year="2005">1</price>
+                <price year="2010">1</price>
+                <price year="2015">1</price>
+                <price year="2020">1</price>
+                <price year="2025">1</price>
+                <price year="2030">1</price>
+                <price year="2035">1</price>
+                <price year="2040">1</price>
+                <price year="2045">1</price>
+                <price year="2050">1</price>
+                <price year="2055">1</price>
+                <price year="2060">1</price>
+                <price year="2065">1</price>
+                <price year="2070">1</price>
+                <price year="2075">1</price>
+                <price year="2080">1</price>
+                <price year="2085">1</price>
+                <price year="2090">1</price>
+                <price year="2095">1</price>
+                <price year="2100">1</price>
+            </unlimited-resource>
+        </region>
+        <region delete="1" name="Africa_Eastern"/>
+        <region delete="1" name="Africa_Northern"/>
+        <region delete="1" name="Africa_Southern"/>
+        <region delete="1" name="Africa_Western"/>
+        <region delete="1" name="Australia_NZ"/>
+        <region delete="1" name="Brazil"/>
+        <region delete="1" name="Canada"/>
+        <region delete="1" name="Central America and Caribbean"/>
+        <region delete="1" name="Central Asia"/>
+        <region delete="1" name="China"/>
+        <region delete="1" name="EU-12"/>
+        <region delete="1" name="EU-15"/>
+        <region delete="1" name="Europe_Eastern"/>
+        <region delete="1" name="Europe_Non_EU"/>
+        <region delete="1" name="European Free Trade Association"/>
+        <region delete="1" name="India"/>
+        <region delete="1" name="Indonesia"/>
+        <region delete="1" name="Japan"/>
+        <region delete="1" name="Mexico"/>
+        <region delete="1" name="Middle East"/>
+        <region delete="1" name="Pakistan"/>
+        <region delete="1" name="Russia"/>
+        <region delete="1" name="South Africa"/>
+        <region delete="1" name="South America_Northern"/>
+        <region delete="1" name="South America_Southern"/>
+        <region delete="1" name="South Asia"/>
+        <region delete="1" name="South Korea"/>
+        <region delete="1" name="Southeast Asia"/>
+        <region delete="1" name="Taiwan"/>
+        <region delete="1" name="Argentina"/>
+        <region delete="1" name="Colombia"/>
+    </world>
+</scenario>
