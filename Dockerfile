@@ -56,3 +56,4 @@ COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.
 RUN pip install jaxlib jax
 COPY notebooks /home/jovyan/notebooks
 COPY data /home/jovyan/data
+RUN ln -s /home/jovyan/data $HOME/data
