@@ -32,16 +32,10 @@ ENV GCAM_INCLUDE=/home/jovyan/gcam-core/cvs/objects \
     GCAM_LIB=/home/jovyan/gcam-core/cvs/objects/build/linux
 
 
-FROM gcam_dev AS gcam_r_dev
-RUN cd /home/jovyan/gcamwrapper && \
-    Rscript -e "devtools::install_deps()"
-RUN Rscript -e "devtools::install_cran('ggplot2')"
-RUN cd /home/jovyan/gcamwrapper && \
-    Rscript -e "devtools::install()"
-
 FROM gcam_dev AS gcam_py_dev
 RUN conda install libboost-python=1.85.0
 RUN sed -i "s/, 'tbbmalloc_proxy'//" /home/jovyan/gcamwrapper/setup.py
+RUN sed -i "s/python_requires=.*$/python_requires='>=3.6'/" /home/jovyan/gcamwrapper/setup.py
 ENV CC='x86_64-conda-linux-gnu-g++'
 RUN cd /home/jovyan/gcamwrapper && \
     pip install .
@@ -49,7 +43,6 @@ RUN cd /home/jovyan/gcamwrapper && \
 FROM ghcr.io/msd-live/jupyter/r-notebook:latest AS gcam_tuner_deploy
 RUN conda install -y tbb=2020.2 libboost-python=1.85.0 pandas
 RUN pip install matplotlib
-COPY --from=gcam_r_dev /opt/conda/lib/R/library /opt/conda/lib/R/library
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcam*.so /opt/conda/lib/python3.11/site-packages/
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper /opt/conda/lib/python3.11/site-packages/gcamwrapper
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info /opt/conda/lib/python3.11/site-packages/gcamwrapper-0.1.0.dist-info
