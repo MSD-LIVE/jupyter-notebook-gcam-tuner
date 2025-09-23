@@ -1,5 +1,5 @@
 
-FROM ghcr.io/msd-live/jupyter/r-notebook:latest AS gcam_dev
+FROM ghcr.io/msd-live/jupyter/datascience-notebook:latest AS gcam_dev
 RUN git clone --depth 1 --branch gcam-v7.1 https://github.com/JGCRI/gcam-core.git /home/jovyan/gcam-core
 RUN cd /home/jovyan/gcam-core && \
     git submodule update --init cvs/objects/climate/source/hector
@@ -40,7 +40,7 @@ ENV CC='x86_64-conda-linux-gnu-g++'
 RUN cd /home/jovyan/gcamwrapper && \
     pip install .
 
-FROM ghcr.io/msd-live/jupyter/r-notebook:latest AS gcam_tuner_deploy
+FROM ghcr.io/msd-live/jupyter/datascience-notebook:latest AS gcam_tuner_deploy
 RUN conda install -y tbb=2020.2 libboost-python=1.85.0 pandas
 RUN pip install matplotlib
 COPY --from=gcam_py_dev /opt/conda/lib/python3.11/site-packages/gcam*.so /opt/conda/lib/python3.11/site-packages/
